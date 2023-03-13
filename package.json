@@ -1,0 +1,24 @@
+{
+  "name": "phonebook",
+  "version": "0.0.1",
+  "description": "fullstack course exercise 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../full-stack-open/part2/phonebook && npm run build && copy -r build /Computer-Science/Courses/Fullstack/full-stack-open-exercises",
+    "deploy": "flyctl deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ying Tu",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
