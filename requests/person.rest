@@ -1,10 +1,10 @@
 GET http://localhost:3001/api/persons
 
 ###
-GET http://localhost:3001/api/persons/1
+GET http://localhost:3001/api/persons/640fd7c32774fce3c744bf53
 
 ###
-DELETE http://localhost:3001/api/persons/5
+DELETE http://localhost:3001/api/persons/640fd7c32774fce3c744bf53
 
 ###
 POST http://localhost:3001/api/persons
@@ -14,3 +14,13 @@ Content-Type: application/json
     "name": "Lewis",
     "number": "02-3355-4455"
 }
+
+###
+PUT http://localhost:3001/api/persons/640fd7c32774fce3c744bf53
+Content-Type: application/json
+
+{
+    "name": "Lewis",
+    "number": "02-3355-4455"
+}
+
