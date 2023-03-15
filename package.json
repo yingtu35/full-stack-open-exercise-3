@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "lint": "eslint .",
     "build:ui": "rm -rf build && cd ../full-stack-open/part2/phonebook && npm run build && copy -r build /Computer-Science/Courses/Fullstack/full-stack-open-exercises",
     "deploy": "flyctl deploy",
     "deploy:full": "npm run build:ui && npm run deploy",
@@ -21,6 +22,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2",
     "nodemon": "^2.0.21"
   }
 }

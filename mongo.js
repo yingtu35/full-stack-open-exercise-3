@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 if (process.argv.length < 3) {
     console.log("Password is required")
@@ -8,35 +8,34 @@ if (process.argv.length < 3) {
 const password = process.argv[2]
 const url = `mongodb+srv://fullstack:${password}@myfirstcluster.r38o8ej.mongodb.net/phonebook?retryWrites=true&w=majority`
 
-mongoose.set('strictQuery', false)
+mongoose.set("strictQuery", false)
 mongoose.connect(url)
 
 const personsSchema = new mongoose.Schema({
     name: String,
     number: String
 })
-const Persons = mongoose.model('Person', personsSchema)
+const Persons = mongoose.model("Person", personsSchema)
 
 if (process.argv.length < 5) {
     // display all of the entries in the phonebook
     console.log("phonebook:")
     Persons.find({}).then(result => {
         result.forEach(person => {
-            console.log(person.name, person.number);
-        });
+            console.log(person.name, person.number)
+        })
         mongoose.connection.close()
     })
 }
 else {
     // add new entry to the phonebook
-    const name = process.argv[3];
-    const number = process.argv[4];
+    const name = process.argv[3]
+    const number = process.argv[4]
     const person = new Persons({
-        "name": name, 
+        "name": name,
         "number": number
     })
-    
-    person.save().then(result => {
+    person.save().then(() => {
         console.log(`added ${person.name} number ${person.number} to phonebook`)
         mongoose.connection.close()
     })

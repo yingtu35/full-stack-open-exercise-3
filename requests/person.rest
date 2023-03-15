@@ -12,15 +12,15 @@ Content-Type: application/json
 
 {
     "name": "Lewis",
-    "number": "02-3355-4455"
+    "number": "02-33554455"
 }
 
 ###
-PUT http://localhost:3001/api/persons/640fd7c32774fce3c744bf53
+PUT http://localhost:3001/api/persons/640f28a53c938141da76944f
 Content-Type: application/json
 
 {
-    "name": "Lewis",
-    "number": "02-3355-4455"
+    "name": "Mary Poppendieck",
+    "number": "39-236423122"
 }
 
